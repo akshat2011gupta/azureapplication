@@ -15,7 +15,6 @@ $last=$_POST["last"];
 $gpa=$_POST["gpa"];
 $major=$_POST["major"];
 
-echo "$major";
 
 
 $data = [
@@ -26,7 +25,7 @@ $data = [
     'gpa' => $gpa,
     'major' => $major,
 ];
-$sql = "INSERT INTO topstudents (id,roll,firstname,lastname,gpa,major) VALUES (:id ,:roll, :first, :last,:gpa,:major)";
+$sql = "INSERT INTO topstudents (id,rollno,firstname,lastname,avggpa,major) VALUES (:id ,:roll, :first, :last,:gpa,:major)";
 
 
 $stmt= $conn->prepare($sql);
