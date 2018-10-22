@@ -7,7 +7,7 @@ catch (PDOException $e) {
     print("Error connecting to SQL Server.");
     die(print_r($e));
 }
-Print("Taking Values \n");
+
 $id='17';
 $roll=$_POST["roll"];
 $first=$_POST["first"];
@@ -16,7 +16,7 @@ $gpa=$_POST["gpa"];
 $major=$_POST["major"];
 
 
-Print("Adding Values Into ");
+
 $data = [
     'id' => $id,
     'roll' => $roll,
@@ -30,7 +30,7 @@ $sql = "INSERT INTO topstudents VALUES (:id ,:roll, :first, :last,:gpa,:major)";
 
 $stmt= $conn->prepare($sql);
 $stmt->execute($data);
-Print("Ending program");
+Print("one row effected");
 
 $conn.close();
 ?>
