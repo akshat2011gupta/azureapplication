@@ -15,7 +15,7 @@ $last=$_POST["last"];
 $gpa=$_POST["gpa"];
 $major=$_POST["major"];
 
-echo $major;
+echo "$major";
 
 
 $data = [
