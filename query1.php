@@ -20,9 +20,13 @@ $sql = "select * from topstudents where rollno='$roll'";
 foreach($conn->query($sql) as  $row)
 {
      echo $row["id"];
+     echo "\n";
      echo $row["firstname"];
+     echo "\n";
      echo $row["lastname"];
+     echo "\n";
      echo $row["rollno"];
+     echo "\n";
      echo $row["major"];
 }
 
